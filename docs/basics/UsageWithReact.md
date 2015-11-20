@@ -86,7 +86,7 @@ Redux 的 React 绑定库拥抱了 [“智能”组件和“笨拙”组件相�
 #### `components/AddTodo.js`
 
 ```js
-import React, { findDOMNode, Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 export default class AddTodo extends Component {
   render() {
@@ -101,7 +101,7 @@ export default class AddTodo extends Component {
   }
 
   handleClick(e) {
-    const node = findDOMNode(this.refs.input);
+    const node = this.refs.input;
     const text = node.value.trim();
     this.props.onAddClick(text);
     node.value = '';
