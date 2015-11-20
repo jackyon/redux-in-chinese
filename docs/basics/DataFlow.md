@@ -14,7 +14,7 @@ Redux 应用中数据的生命周期遵循下面 4 个步骤：
 
     ```js
     { type: 'LIKE_ARTICLE', articleId: 42 };
-    { type: 'FETCH_USER_SUCCESS', response: { id: 3, name: 'Megan' } };
+    { type: 'FETCH_USER_SUCCESS', response: { id: 3, name: 'Mary' } };
     { type: 'ADD_TODO', text: 'Read the Redux docs.'};
     ```
 
