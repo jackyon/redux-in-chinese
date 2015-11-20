@@ -20,16 +20,6 @@ import todoApp from './reducers';
 let store = createStore(todoApp);
 ```
 
-为了提高可维护性，拆分成多个 reducer，这时需要使用 [`combineReducers()`](../api/combineReducers.md) 来把它们组合起来。
-
-```js
-import { combineReducers, createStore } from 'redux';
-import * as reducers from './reducers';
-
-let todoApp = combineReducers(reducers);
-let store = createStore(todoApp);
-```
-
 [`createStore()`](../api/createStore.md) 的第二个参数可以设置初始状态。
 这对开发同构应用时非常有用，可以用于把服务器端生成的 state 转变后在浏览器端传给应用。
 
@@ -75,10 +65,9 @@ unsubscribe();
 #### `index.js`
 
 ```js
-import { combineReducers, createStore } from 'redux';
-import * as reducers from './reducers';
+import { createStore } from 'redux';
+import todoApp from './reducers'
 
-let todoApp = combineReducers(reducers);
 let store = createStore(todoApp);
 ```
 
